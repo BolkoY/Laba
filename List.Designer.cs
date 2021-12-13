@@ -110,6 +110,8 @@
             this.ClientSize = new System.Drawing.Size(664, 431);
             this.Controls.Add(this.AddPanel);
             this.Controls.Add(this.ListPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "List";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Список пациентов";

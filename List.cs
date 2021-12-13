@@ -35,37 +35,29 @@ namespace тренажер
         private void List_Load(object sender, EventArgs e)
         {
             DataBase db = new DataBase();
-
-            DataTable table = new DataTable();
+            db.OpenConnection();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM db.table1",db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM db.table1", db.GetConnection());
 
             adapter.SelectCommand = command;
 
-            DataSet ds = new DataSet();
-            adapter.Fill(ds);
+            string a;
 
-            foreach (DataTable dt in ds.Tables)
+            MySqlDataReader reader;
+            reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                foreach (DataColumn column in dt.Columns)
-                    ListBox.Items.Add(column.ColumnName);
-                
-                // перебор всех строк таблицы
-                foreach (DataRow row in dt.Rows)
-                {
-                    string[] a = (string[])row.ItemArray;
-                    // получаем все ячейки строки
-                    ListBox.Items.Add(a);
-                    //foreach (object cell in cells)
-                    //    ListBox.Items.Add(cell);
-                }
+                a = reader.GetString(0) + " ";
+                a += reader.GetString(1) + " ";
+                a += reader.GetString(2);
+                ListBox.Items.Add(a);
             }
-            //string[] countries = 
+            command.Dispose();
+            reader.Close();
 
-           // string[] countries = { "Бразилия", "Аргентина", "Чили", "Уругвай", "Колумбия" };
-            //ListBox.Items.AddRange(countries);
+            db.CloseConnection();
         }
 
         private void List_FormClosed(object sender, FormClosedEventArgs e)

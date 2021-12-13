@@ -60,6 +60,8 @@
             this.ClientSize = new System.Drawing.Size(664, 431);
             this.Controls.Add(this.StartExamButton);
             this.Controls.Add(this.ListButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Меню";

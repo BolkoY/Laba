@@ -133,5 +133,20 @@
   <ItemGroup>
     <None Include="Images\Снимок3.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\влажность.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\давление.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\проводимость.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\пульс.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\температура.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

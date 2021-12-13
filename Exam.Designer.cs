@@ -39,18 +39,24 @@
             this.TypWorkloadLabel = new System.Windows.Forms.Label();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.listBox5 = new System.Windows.Forms.ListBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.TemperaturaPictureBox = new System.Windows.Forms.PictureBox();
+            this.PulsPictureBox = new System.Windows.Forms.PictureBox();
+            this.ProvodimostPictureBox = new System.Windows.Forms.PictureBox();
+            this.DavleniePictureBox = new System.Windows.Forms.PictureBox();
+            this.VlajnostPictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TemperaturaPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PulsPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProvodimostPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DavleniePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VlajnostPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ReturnButton
             // 
             this.ReturnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReturnButton.Location = new System.Drawing.Point(12, 389);
+            this.ReturnButton.Location = new System.Drawing.Point(58, 606);
             this.ReturnButton.Name = "ReturnButton";
             this.ReturnButton.Size = new System.Drawing.Size(95, 30);
             this.ReturnButton.TabIndex = 9;
@@ -90,26 +96,32 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(170, 57);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(167, 30);
+            this.listBox1.Size = new System.Drawing.Size(167, 26);
             this.listBox1.TabIndex = 13;
             // 
             // listBox2
             // 
+            this.listBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox2.FormattingEnabled = true;
             this.listBox2.Location = new System.Drawing.Point(170, 101);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(167, 30);
+            this.listBox2.Size = new System.Drawing.Size(167, 26);
             this.listBox2.TabIndex = 14;
             // 
             // listBox3
             // 
+            this.listBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox3.FormattingEnabled = true;
             this.listBox3.Location = new System.Drawing.Point(470, 57);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(167, 30);
+            this.listBox3.Size = new System.Drawing.Size(167, 26);
             this.listBox3.TabIndex = 15;
             // 
             // label1
@@ -135,58 +147,97 @@
             // 
             // listBox4
             // 
+            this.listBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox4.FormattingEnabled = true;
             this.listBox4.Location = new System.Drawing.Point(470, 101);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(167, 30);
+            this.listBox4.Size = new System.Drawing.Size(167, 26);
             this.listBox4.TabIndex = 18;
             // 
             // listBox5
             // 
+            this.listBox5.BackColor = System.Drawing.SystemColors.Control;
+            this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox5.FormattingEnabled = true;
             this.listBox5.Location = new System.Drawing.Point(260, 166);
             this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(167, 30);
+            this.listBox5.Size = new System.Drawing.Size(167, 26);
             this.listBox5.TabIndex = 19;
             // 
-            // pictureBox3
+            // TemperaturaPictureBox
             // 
-            this.pictureBox3.Image = global::тренажер.Properties.Resources.Снимок3;
-            this.pictureBox3.Location = new System.Drawing.Point(691, 273);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(120, 47);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 21;
-            this.pictureBox3.TabStop = false;
+            this.TemperaturaPictureBox.Image = global::тренажер.Properties.Resources.температура;
+            this.TemperaturaPictureBox.Location = new System.Drawing.Point(1108, 171);
+            this.TemperaturaPictureBox.Name = "TemperaturaPictureBox";
+            this.TemperaturaPictureBox.Size = new System.Drawing.Size(91, 60);
+            this.TemperaturaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TemperaturaPictureBox.TabIndex = 25;
+            this.TemperaturaPictureBox.TabStop = false;
+            // 
+            // PulsPictureBox
+            // 
+            this.PulsPictureBox.Image = global::тренажер.Properties.Resources.пульс;
+            this.PulsPictureBox.Location = new System.Drawing.Point(1040, 257);
+            this.PulsPictureBox.Name = "PulsPictureBox";
+            this.PulsPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.PulsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PulsPictureBox.TabIndex = 24;
+            this.PulsPictureBox.TabStop = false;
+            // 
+            // ProvodimostPictureBox
+            // 
+            this.ProvodimostPictureBox.Image = global::тренажер.Properties.Resources.проводимость;
+            this.ProvodimostPictureBox.Location = new System.Drawing.Point(1221, 171);
+            this.ProvodimostPictureBox.Name = "ProvodimostPictureBox";
+            this.ProvodimostPictureBox.Size = new System.Drawing.Size(100, 50);
+            this.ProvodimostPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ProvodimostPictureBox.TabIndex = 23;
+            this.ProvodimostPictureBox.TabStop = false;
+            // 
+            // DavleniePictureBox
+            // 
+            this.DavleniePictureBox.Image = global::тренажер.Properties.Resources.давление;
+            this.DavleniePictureBox.Location = new System.Drawing.Point(1221, 99);
+            this.DavleniePictureBox.Name = "DavleniePictureBox";
+            this.DavleniePictureBox.Size = new System.Drawing.Size(100, 66);
+            this.DavleniePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DavleniePictureBox.TabIndex = 22;
+            this.DavleniePictureBox.TabStop = false;
+            this.DavleniePictureBox.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // VlajnostPictureBox
+            // 
+            this.VlajnostPictureBox.Image = global::тренажер.Properties.Resources.влажность;
+            this.VlajnostPictureBox.Location = new System.Drawing.Point(979, 151);
+            this.VlajnostPictureBox.Name = "VlajnostPictureBox";
+            this.VlajnostPictureBox.Size = new System.Drawing.Size(46, 58);
+            this.VlajnostPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.VlajnostPictureBox.TabIndex = 21;
+            this.VlajnostPictureBox.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::тренажер.Properties.Resources._1;
-            this.pictureBox2.Location = new System.Drawing.Point(651, 57);
+            this.pictureBox2.Location = new System.Drawing.Point(953, 67);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(332, 302);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::тренажер.Properties.Resources.Снимок2;
-            this.pictureBox1.Location = new System.Drawing.Point(79, 222);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(538, 137);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Exam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(995, 574);
-            this.Controls.Add(this.pictureBox3);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1350, 661);
+            this.Controls.Add(this.ProvodimostPictureBox);
+            this.Controls.Add(this.TemperaturaPictureBox);
+            this.Controls.Add(this.PulsPictureBox);
+            this.Controls.Add(this.DavleniePictureBox);
+            this.Controls.Add(this.VlajnostPictureBox);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.listBox5);
             this.Controls.Add(this.listBox4);
@@ -199,22 +250,25 @@
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.AgeLabel);
             this.Controls.Add(this.ReturnButton);
-            this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Exam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Exam";
+            this.Text = "Обследование";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Exam_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.Load += new System.EventHandler(this.Exam_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.TemperaturaPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PulsPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProvodimostPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DavleniePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VlajnostPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ReturnButton;
         private System.Windows.Forms.Label AgeLabel;
         private System.Windows.Forms.Label NameLabel;
@@ -227,6 +281,10 @@
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox VlajnostPictureBox;
+        private System.Windows.Forms.PictureBox DavleniePictureBox;
+        private System.Windows.Forms.PictureBox ProvodimostPictureBox;
+        private System.Windows.Forms.PictureBox PulsPictureBox;
+        private System.Windows.Forms.PictureBox TemperaturaPictureBox;
     }
 }

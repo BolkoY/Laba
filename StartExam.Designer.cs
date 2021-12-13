@@ -31,17 +31,17 @@
             this.ReturnButton = new System.Windows.Forms.Button();
             this.SetLabel = new System.Windows.Forms.Label();
             this.SetWorkloadLabel = new System.Windows.Forms.Label();
-            this.WorkloadTextBox = new System.Windows.Forms.TextBox();
             this.DateLabel = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.DavlenieСheckBox = new System.Windows.Forms.CheckBox();
+            this.VlajnostCheckBox = new System.Windows.Forms.CheckBox();
+            this.PulsCheckBox = new System.Windows.Forms.CheckBox();
+            this.ProvodimostCheckBox = new System.Windows.Forms.CheckBox();
+            this.TemperaturaCheckBox = new System.Windows.Forms.CheckBox();
             this.StartExamButton = new System.Windows.Forms.Button();
             this.NameLabel = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.WorkComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // ReturnButton
@@ -76,14 +76,6 @@
             this.SetWorkloadLabel.TabIndex = 15;
             this.SetWorkloadLabel.Text = "Выберите нагрузку:";
             // 
-            // WorkloadTextBox
-            // 
-            this.WorkloadTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.WorkloadTextBox.Location = new System.Drawing.Point(32, 203);
-            this.WorkloadTextBox.Name = "WorkloadTextBox";
-            this.WorkloadTextBox.Size = new System.Drawing.Size(334, 29);
-            this.WorkloadTextBox.TabIndex = 16;
-            // 
             // DateLabel
             // 
             this.DateLabel.AutoSize = true;
@@ -94,58 +86,56 @@
             this.DateLabel.TabIndex = 17;
             this.DateLabel.Text = "Выберите дату:";
             // 
-            // checkBox1
+            // DavlenieСheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(535, 189);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(74, 17);
-            this.checkBox1.TabIndex = 19;
-            this.checkBox1.Text = "давления";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.DavlenieСheckBox.AutoSize = true;
+            this.DavlenieСheckBox.Location = new System.Drawing.Point(535, 189);
+            this.DavlenieСheckBox.Name = "DavlenieСheckBox";
+            this.DavlenieСheckBox.Size = new System.Drawing.Size(74, 17);
+            this.DavlenieСheckBox.TabIndex = 19;
+            this.DavlenieСheckBox.Text = "давления";
+            this.DavlenieСheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // VlajnostCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkBox2.Location = new System.Drawing.Point(535, 76);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(81, 17);
-            this.checkBox2.TabIndex = 20;
-            this.checkBox2.Text = "влажности";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.VlajnostCheckBox.AutoSize = true;
+            this.VlajnostCheckBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.VlajnostCheckBox.Location = new System.Drawing.Point(535, 76);
+            this.VlajnostCheckBox.Name = "VlajnostCheckBox";
+            this.VlajnostCheckBox.Size = new System.Drawing.Size(81, 17);
+            this.VlajnostCheckBox.TabIndex = 20;
+            this.VlajnostCheckBox.Text = "влажности";
+            this.VlajnostCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // PulsCheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(535, 43);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(61, 17);
-            this.checkBox3.TabIndex = 21;
-            this.checkBox3.Text = "пульса";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.PulsCheckBox.AutoSize = true;
+            this.PulsCheckBox.Location = new System.Drawing.Point(535, 43);
+            this.PulsCheckBox.Name = "PulsCheckBox";
+            this.PulsCheckBox.Size = new System.Drawing.Size(61, 17);
+            this.PulsCheckBox.TabIndex = 21;
+            this.PulsCheckBox.Text = "пульса";
+            this.PulsCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // ProvodimostCheckBox
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(535, 113);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(99, 17);
-            this.checkBox4.TabIndex = 22;
-            this.checkBox4.Text = "проводимости";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.ProvodimostCheckBox.AutoSize = true;
+            this.ProvodimostCheckBox.Location = new System.Drawing.Point(535, 113);
+            this.ProvodimostCheckBox.Name = "ProvodimostCheckBox";
+            this.ProvodimostCheckBox.Size = new System.Drawing.Size(99, 17);
+            this.ProvodimostCheckBox.TabIndex = 22;
+            this.ProvodimostCheckBox.Text = "проводимости";
+            this.ProvodimostCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // TemperaturaCheckBox
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(535, 148);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(93, 17);
-            this.checkBox5.TabIndex = 23;
-            this.checkBox5.Text = "температуры";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.TemperaturaCheckBox.AutoSize = true;
+            this.TemperaturaCheckBox.Location = new System.Drawing.Point(535, 148);
+            this.TemperaturaCheckBox.Name = "TemperaturaCheckBox";
+            this.TemperaturaCheckBox.Size = new System.Drawing.Size(93, 17);
+            this.TemperaturaCheckBox.TabIndex = 23;
+            this.TemperaturaCheckBox.Text = "температуры";
+            this.TemperaturaCheckBox.UseVisualStyleBackColor = true;
             // 
             // StartExamButton
             // 
@@ -175,6 +165,7 @@
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(297, 29);
             this.NameTextBox.TabIndex = 26;
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // dateTimePicker
             // 
@@ -185,25 +176,42 @@
             this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker.TabIndex = 27;
             // 
+            // WorkComboBox
+            // 
+            this.WorkComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.WorkComboBox.FormattingEnabled = true;
+            this.WorkComboBox.Items.AddRange(new object[] {
+            "бег",
+            "ходьба",
+            "велосипед",
+            "силовые упражнения",
+            "приседания"});
+            this.WorkComboBox.Location = new System.Drawing.Point(36, 205);
+            this.WorkComboBox.Name = "WorkComboBox";
+            this.WorkComboBox.Size = new System.Drawing.Size(325, 21);
+            this.WorkComboBox.TabIndex = 28;
+            // 
             // StartExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 431);
+            this.Controls.Add(this.WorkComboBox);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.StartExamButton);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.TemperaturaCheckBox);
+            this.Controls.Add(this.ProvodimostCheckBox);
+            this.Controls.Add(this.PulsCheckBox);
+            this.Controls.Add(this.VlajnostCheckBox);
+            this.Controls.Add(this.DavlenieСheckBox);
             this.Controls.Add(this.DateLabel);
-            this.Controls.Add(this.WorkloadTextBox);
             this.Controls.Add(this.SetWorkloadLabel);
             this.Controls.Add(this.SetLabel);
             this.Controls.Add(this.ReturnButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "StartExam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация обследавания";
@@ -217,16 +225,16 @@
         private System.Windows.Forms.Button ReturnButton;
         private System.Windows.Forms.Label SetLabel;
         private System.Windows.Forms.Label SetWorkloadLabel;
-        private System.Windows.Forms.TextBox WorkloadTextBox;
         private System.Windows.Forms.Label DateLabel;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox DavlenieСheckBox;
+        private System.Windows.Forms.CheckBox VlajnostCheckBox;
+        private System.Windows.Forms.CheckBox PulsCheckBox;
+        private System.Windows.Forms.CheckBox ProvodimostCheckBox;
+        private System.Windows.Forms.CheckBox TemperaturaCheckBox;
         private System.Windows.Forms.Button StartExamButton;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.ComboBox WorkComboBox;
     }
 }

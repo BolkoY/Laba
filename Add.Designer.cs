@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.AgeTextBox = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.NameLabel = new System.Windows.Forms.Label();
             this.AgeLabel = new System.Windows.Forms.Label();
             this.SexLabel = new System.Windows.Forms.Label();
             this.ReturnButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.AgeComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // NameTextBox
@@ -46,24 +46,17 @@
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(334, 29);
             this.NameTextBox.TabIndex = 0;
-            // 
-            // AgeTextBox
-            // 
-            this.AgeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AgeTextBox.Location = new System.Drawing.Point(318, 195);
-            this.AgeTextBox.Name = "AgeTextBox";
-            this.AgeTextBox.Size = new System.Drawing.Size(121, 29);
-            this.AgeTextBox.TabIndex = 1;
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(318, 265);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.Size = new System.Drawing.Size(70, 17);
             this.radioButton1.TabIndex = 2;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.Text = "мужской";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -71,10 +64,10 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(318, 289);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.Size = new System.Drawing.Size(69, 17);
             this.radioButton2.TabIndex = 3;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.Text = "женский";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // NameLabel
@@ -118,30 +111,83 @@
             this.ReturnButton.UseVisualStyleBackColor = true;
             this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
             // 
-            // SaveButton
+            // AddButton
             // 
-            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveButton.Location = new System.Drawing.Point(420, 350);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(95, 30);
-            this.SaveButton.TabIndex = 8;
-            this.SaveButton.Text = "Добавить";
-            this.SaveButton.UseVisualStyleBackColor = true;
+            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddButton.Location = new System.Drawing.Point(420, 350);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(95, 30);
+            this.AddButton.TabIndex = 8;
+            this.AddButton.Text = "Добавить";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // AgeComboBox
+            // 
+            this.AgeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AgeComboBox.FormattingEnabled = true;
+            this.AgeComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40"});
+            this.AgeComboBox.Location = new System.Drawing.Point(318, 199);
+            this.AgeComboBox.Name = "AgeComboBox";
+            this.AgeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.AgeComboBox.TabIndex = 9;
             // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 406);
-            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.AgeComboBox);
+            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.SexLabel);
             this.Controls.Add(this.AgeLabel);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.AgeTextBox);
             this.Controls.Add(this.NameTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление пациента";
@@ -154,13 +200,13 @@
         #endregion
 
         private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.TextBox AgeTextBox;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Label AgeLabel;
         private System.Windows.Forms.Label SexLabel;
         private System.Windows.Forms.Button ReturnButton;
-        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.ComboBox AgeComboBox;
     }
 }

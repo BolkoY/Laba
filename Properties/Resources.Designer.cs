@@ -73,6 +73,46 @@ namespace тренажер.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap влажность {
+            get {
+                object obj = ResourceManager.GetObject("влажность", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap давление {
+            get {
+                object obj = ResourceManager.GetObject("давление", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap проводимость {
+            get {
+                object obj = ResourceManager.GetObject("проводимость", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap пульс {
+            get {
+                object obj = ResourceManager.GetObject("пульс", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Снимок {
             get {
                 object obj = ResourceManager.GetObject("Снимок", resourceCulture);
@@ -96,6 +136,16 @@ namespace тренажер.Properties {
         internal static System.Drawing.Bitmap Снимок3 {
             get {
                 object obj = ResourceManager.GetObject("Снимок3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap температура {
+            get {
+                object obj = ResourceManager.GetObject("температура", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

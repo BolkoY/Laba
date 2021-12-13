@@ -32,12 +32,22 @@ namespace тренажер
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+                
         }
 
         private void Exam_FormClosed(object sender, FormClosedEventArgs e)
         {
             formtoopen.Show();
+        }
+
+        private void Exam_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
