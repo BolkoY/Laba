@@ -49,5 +49,35 @@ namespace тренажер
         {
 
         }
+
+        public string NameLB
+        {
+            get { return NameListBox.Text; }
+            set { NameListBox.Items.Add ( value); }
+        }
+
+        public string DateLB
+        {
+            get { return DateListBox.Text; }
+            set { DateListBox.Items.Add(value); }
+        }
+
+        public string AgeLB
+        {
+            get { return AgeListBox.Text; }
+            set { AgeListBox.Items.Add(value); }
+        }
+
+        public string SexLB
+        {
+            get { return SexListBox.Text; }
+            set { SexListBox.Items.Add(value); }
+        }
+
+        public string WorkLB
+        {
+            get { return WorkListBox.Text; }
+            set { WorkListBox.Items.Add(value); }
+        }
     }
 }

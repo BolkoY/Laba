@@ -32,6 +32,24 @@ namespace тренажер
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            if (NameTextBox.Text=="")
+            {
+                MessageBox.Show("введите имя пациента");
+                return;
+            }
+
+            if (AgeComboBox.Text=="")
+            {
+                MessageBox.Show("введите возраст пациента");
+                return;
+            }
+
+            if (radioButton1.Checked==radioButton2.Checked)
+            {
+                MessageBox.Show("введите пол пациента");
+                return;
+            }
+
             DataBase dataBase = new DataBase();
             dataBase.OpenConnection();
             MySqlCommand command = new MySqlCommand("INSERT INTO `db`.`table1` (`name`, `age`, `sex`) VALUES (@name, @age, @sex);", dataBase.GetConnection());

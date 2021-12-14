@@ -32,13 +32,13 @@
             this.AgeLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
             this.SexLabel = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.NameListBox = new System.Windows.Forms.ListBox();
+            this.AgeListBox = new System.Windows.Forms.ListBox();
+            this.DateListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TypWorkloadLabel = new System.Windows.Forms.Label();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.SexListBox = new System.Windows.Forms.ListBox();
+            this.WorkListBox = new System.Windows.Forms.ListBox();
             this.TemperaturaPictureBox = new System.Windows.Forms.PictureBox();
             this.PulsPictureBox = new System.Windows.Forms.PictureBox();
             this.ProvodimostPictureBox = new System.Windows.Forms.PictureBox();
@@ -88,47 +88,53 @@
             // 
             this.SexLabel.AutoSize = true;
             this.SexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SexLabel.Location = new System.Drawing.Point(371, 99);
+            this.SexLabel.Location = new System.Drawing.Point(533, 99);
             this.SexLabel.Name = "SexLabel";
             this.SexLabel.Size = new System.Drawing.Size(71, 31);
             this.SexLabel.TabIndex = 12;
             this.SexLabel.Text = "пол:";
             // 
-            // listBox1
+            // NameListBox
             // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(170, 57);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(167, 26);
-            this.listBox1.TabIndex = 13;
+            this.NameListBox.BackColor = System.Drawing.SystemColors.Control;
+            this.NameListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NameListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.25F);
+            this.NameListBox.FormattingEnabled = true;
+            this.NameListBox.ItemHeight = 30;
+            this.NameListBox.Location = new System.Drawing.Point(170, 57);
+            this.NameListBox.Name = "NameListBox";
+            this.NameListBox.Size = new System.Drawing.Size(337, 30);
+            this.NameListBox.TabIndex = 13;
             // 
-            // listBox2
+            // AgeListBox
             // 
-            this.listBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(170, 101);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(167, 26);
-            this.listBox2.TabIndex = 14;
+            this.AgeListBox.BackColor = System.Drawing.SystemColors.Control;
+            this.AgeListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AgeListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.25F);
+            this.AgeListBox.FormattingEnabled = true;
+            this.AgeListBox.ItemHeight = 30;
+            this.AgeListBox.Location = new System.Drawing.Point(170, 101);
+            this.AgeListBox.Name = "AgeListBox";
+            this.AgeListBox.Size = new System.Drawing.Size(167, 30);
+            this.AgeListBox.TabIndex = 14;
             // 
-            // listBox3
+            // DateListBox
             // 
-            this.listBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(470, 57);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(167, 26);
-            this.listBox3.TabIndex = 15;
+            this.DateListBox.BackColor = System.Drawing.SystemColors.Control;
+            this.DateListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DateListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.25F);
+            this.DateListBox.FormattingEnabled = true;
+            this.DateListBox.ItemHeight = 30;
+            this.DateListBox.Location = new System.Drawing.Point(632, 57);
+            this.DateListBox.Name = "DateListBox";
+            this.DateListBox.Size = new System.Drawing.Size(315, 30);
+            this.DateListBox.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(364, 56);
+            this.label1.Location = new System.Drawing.Point(526, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 31);
             this.label1.TabIndex = 16;
@@ -145,25 +151,29 @@
             this.TypWorkloadLabel.Text = "тип нагрузки:";
             this.TypWorkloadLabel.Click += new System.EventHandler(this.TypWorkloadLabel_Click);
             // 
-            // listBox4
+            // SexListBox
             // 
-            this.listBox4.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(470, 101);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(167, 26);
-            this.listBox4.TabIndex = 18;
+            this.SexListBox.BackColor = System.Drawing.SystemColors.Control;
+            this.SexListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SexListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.25F);
+            this.SexListBox.FormattingEnabled = true;
+            this.SexListBox.ItemHeight = 30;
+            this.SexListBox.Location = new System.Drawing.Point(632, 101);
+            this.SexListBox.Name = "SexListBox";
+            this.SexListBox.Size = new System.Drawing.Size(167, 30);
+            this.SexListBox.TabIndex = 18;
             // 
-            // listBox5
+            // WorkListBox
             // 
-            this.listBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.Location = new System.Drawing.Point(260, 166);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(167, 26);
-            this.listBox5.TabIndex = 19;
+            this.WorkListBox.BackColor = System.Drawing.SystemColors.Control;
+            this.WorkListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.WorkListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.25F);
+            this.WorkListBox.FormattingEnabled = true;
+            this.WorkListBox.ItemHeight = 30;
+            this.WorkListBox.Location = new System.Drawing.Point(260, 166);
+            this.WorkListBox.Name = "WorkListBox";
+            this.WorkListBox.Size = new System.Drawing.Size(167, 30);
+            this.WorkListBox.TabIndex = 19;
             // 
             // TemperaturaPictureBox
             // 
@@ -239,13 +249,13 @@
             this.Controls.Add(this.DavleniePictureBox);
             this.Controls.Add(this.VlajnostPictureBox);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.listBox5);
-            this.Controls.Add(this.listBox4);
+            this.Controls.Add(this.WorkListBox);
+            this.Controls.Add(this.SexListBox);
             this.Controls.Add(this.TypWorkloadLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.DateListBox);
+            this.Controls.Add(this.AgeListBox);
+            this.Controls.Add(this.NameListBox);
             this.Controls.Add(this.SexLabel);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.AgeLabel);
@@ -273,13 +283,13 @@
         private System.Windows.Forms.Label AgeLabel;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Label SexLabel;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox NameListBox;
+        private System.Windows.Forms.ListBox AgeListBox;
+        private System.Windows.Forms.ListBox DateListBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TypWorkloadLabel;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.ListBox SexListBox;
+        private System.Windows.Forms.ListBox WorkListBox;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox VlajnostPictureBox;
         private System.Windows.Forms.PictureBox DavleniePictureBox;

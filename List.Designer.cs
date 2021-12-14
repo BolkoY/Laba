@@ -34,6 +34,7 @@
             this.AddPanel = new System.Windows.Forms.Panel();
             this.ReturnButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
+            this.UpdateButton = new System.Windows.Forms.Button();
             this.ListPanel.SuspendLayout();
             this.AddPanel.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +73,7 @@
             // 
             // AddPanel
             // 
+            this.AddPanel.Controls.Add(this.UpdateButton);
             this.AddPanel.Controls.Add(this.ReturnButton);
             this.AddPanel.Controls.Add(this.AddButton);
             this.AddPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -103,6 +105,17 @@
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
+            // UpdateButton
+            // 
+            this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.UpdateButton.Location = new System.Drawing.Point(533, 25);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(95, 30);
+            this.UpdateButton.TabIndex = 9;
+            this.UpdateButton.Text = "Обновить";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
             // List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,5 +144,6 @@
         private System.Windows.Forms.Label ListLabel;
         private System.Windows.Forms.ListBox ListBox;
         private System.Windows.Forms.Button ReturnButton;
+        private System.Windows.Forms.Button UpdateButton;
     }
 }

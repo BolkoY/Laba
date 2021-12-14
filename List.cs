@@ -34,6 +34,33 @@ namespace тренажер
 
         private void List_Load(object sender, EventArgs e)
         {
+            DataBaseUpdate();
+        }
+
+        private void List_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ReturnButton_Click(object sender, EventArgs e)
+        {
+            formtoopen.Show();
+            this.Hide();
+        }
+
+        private void ListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            DataBaseUpdate();
+        }
+
+        private void DataBaseUpdate()
+        {
+            ListBox.Items.Clear();
             DataBase db = new DataBase();
             db.OpenConnection();
 
@@ -54,26 +81,11 @@ namespace тренажер
                 a += reader.GetString(2);
                 ListBox.Items.Add(a);
             }
+            adapter.Dispose();
             command.Dispose();
             reader.Close();
 
             db.CloseConnection();
-        }
-
-        private void List_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void ReturnButton_Click(object sender, EventArgs e)
-        {
-            formtoopen.Show();
-            this.Hide();
-        }
-
-        private void ListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
