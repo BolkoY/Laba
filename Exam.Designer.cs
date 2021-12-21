@@ -45,6 +45,7 @@
             this.DavleniePictureBox = new System.Windows.Forms.PictureBox();
             this.VlajnostPictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.TemperaturaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PulsPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProvodimostPictureBox)).BeginInit();
@@ -56,7 +57,7 @@
             // ReturnButton
             // 
             this.ReturnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReturnButton.Location = new System.Drawing.Point(58, 606);
+            this.ReturnButton.Location = new System.Drawing.Point(953, 448);
             this.ReturnButton.Name = "ReturnButton";
             this.ReturnButton.Size = new System.Drawing.Size(95, 30);
             this.ReturnButton.TabIndex = 9;
@@ -184,6 +185,7 @@
             this.TemperaturaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TemperaturaPictureBox.TabIndex = 25;
             this.TemperaturaPictureBox.TabStop = false;
+            this.TemperaturaPictureBox.Visible = false;
             // 
             // PulsPictureBox
             // 
@@ -194,6 +196,7 @@
             this.PulsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PulsPictureBox.TabIndex = 24;
             this.PulsPictureBox.TabStop = false;
+            this.PulsPictureBox.Visible = false;
             // 
             // ProvodimostPictureBox
             // 
@@ -204,6 +207,7 @@
             this.ProvodimostPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ProvodimostPictureBox.TabIndex = 23;
             this.ProvodimostPictureBox.TabStop = false;
+            this.ProvodimostPictureBox.Visible = false;
             // 
             // DavleniePictureBox
             // 
@@ -214,6 +218,7 @@
             this.DavleniePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.DavleniePictureBox.TabIndex = 22;
             this.DavleniePictureBox.TabStop = false;
+            this.DavleniePictureBox.Visible = false;
             this.DavleniePictureBox.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // VlajnostPictureBox
@@ -225,6 +230,7 @@
             this.VlajnostPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.VlajnostPictureBox.TabIndex = 21;
             this.VlajnostPictureBox.TabStop = false;
+            this.VlajnostPictureBox.Visible = false;
             // 
             // pictureBox2
             // 
@@ -240,6 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1350, 661);
@@ -260,7 +267,7 @@
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.AgeLabel);
             this.Controls.Add(this.ReturnButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Exam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Обследование";
@@ -296,5 +303,6 @@
         private System.Windows.Forms.PictureBox ProvodimostPictureBox;
         private System.Windows.Forms.PictureBox PulsPictureBox;
         private System.Windows.Forms.PictureBox TemperaturaPictureBox;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

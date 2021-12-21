@@ -43,8 +43,14 @@ namespace тренажер
         {
             if (PatientExist()==false)
                 return;
-
-            if(ProvodimostCheckBox.Checked==false && VlajnostCheckBox.Checked==false && 
+            List<string> checkBoxNames = new List<string>();
+            if (ProvodimostCheckBox.Checked) checkBoxNames.Add("Проводимость");
+            if (VlajnostCheckBox.Checked) checkBoxNames.Add("Влажность");
+            if (PulsCheckBox.Checked) checkBoxNames.Add("Пульс");
+            if (DavlenieСheckBox.Checked) checkBoxNames.Add("Давление");
+            if (TemperaturaCheckBox.Checked) checkBoxNames.Add("Температура");
+            
+            if (ProvodimostCheckBox.Checked==false && VlajnostCheckBox.Checked==false && 
                 PulsCheckBox.Checked==false && DavlenieСheckBox.Checked==false && TemperaturaCheckBox.Checked==false)
             {
                 MessageBox.Show("выберите датчики");
@@ -58,14 +64,23 @@ namespace тренажер
             }
 
             this.Hide();
-            Exam exam = new Exam(this);
+            Exam exam = new Exam(this,checkBoxNames);
             
             exam.NameLB=this.NameTextBox.Text;
             exam.AgeLB=age;
             exam.SexLB=sex;
             exam.DateLB=dateTimePicker.Text;
             exam.WorkLB=WorkComboBox.Text;
-
+            if(PulsCheckBox.Checked==true)
+                exam.PulsPBShow();
+            if (VlajnostCheckBox.Checked==true)
+                exam.VlajnostPBShow();
+            if (DavlenieСheckBox.Checked==true)
+                exam.DavleniePBShow();
+            if (TemperaturaCheckBox.Checked==true)
+                exam.TemperaturaPBShow();
+            if (ProvodimostCheckBox.Checked==true)
+                exam.ProvodimostPBShow();
             exam.Show();
             this.NameTextBox.Text = "";
         }

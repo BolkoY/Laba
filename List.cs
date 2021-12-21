@@ -70,17 +70,20 @@ namespace тренажер
 
             adapter.SelectCommand = command;
 
-            string a;
+
 
             MySqlDataReader reader;
             reader = command.ExecuteReader();
             while (reader.Read())
             {
-                a = reader.GetString(0) + " ";
-                a += reader.GetString(1) + " ";
-                a += reader.GetString(2);
+                string a = "";
+                for (int i = 0; i<3; i++)
+                {
+                    a+=reader.GetString(i);
+                }
                 ListBox.Items.Add(a);
             }
+            
             adapter.Dispose();
             command.Dispose();
             reader.Close();

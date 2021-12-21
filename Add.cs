@@ -14,9 +14,13 @@ namespace тренажер
     public partial class Add : Form
     {
         public Form formtoopen;
+        public DataBase database;
+        private const string INSERT_STRING = "INSERT INTO `db`.`table1` (`name`, `age`, `sex`) VALUES (@name, @age, @sex);";
         public Add(List list)
         {
             InitializeComponent();
+            database = new DataBase();
+            database.OpenConnection();
             formtoopen=list;
         }
 
@@ -26,7 +30,9 @@ namespace тренажер
         }
 
         private void ReturnButton_Click(object sender, EventArgs e)
-        { 
+        {
+
+            database.CloseConnection();
             this.Close();
         }
 
@@ -50,9 +56,7 @@ namespace тренажер
                 return;
             }
 
-            DataBase dataBase = new DataBase();
-            dataBase.OpenConnection();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `db`.`table1` (`name`, `age`, `sex`) VALUES (@name, @age, @sex);", dataBase.GetConnection());
+            MySqlCommand command = new MySqlCommand(INSERT_STRING, database.GetConnection());
 
             command.Parameters.Add("@name", MySqlDbType.VarChar).Value = NameTextBox.Text;
             command.Parameters.Add("@age", MySqlDbType.Int32).Value = AgeComboBox.Text;
@@ -67,14 +71,13 @@ namespace тренажер
 
             if (command.ExecuteNonQuery()==1)
             {
-                MessageBox.Show("done");
+                MessageBox.Show("сохранено");
             }
             else
             {
-                MessageBox.Show("obosralsya");
+                MessageBox.Show("ошибка");
             }
 
-            dataBase.CloseConnection();
         }
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
