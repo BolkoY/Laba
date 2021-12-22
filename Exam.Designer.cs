@@ -173,7 +173,7 @@
             this.WorkListBox.ItemHeight = 30;
             this.WorkListBox.Location = new System.Drawing.Point(260, 166);
             this.WorkListBox.Name = "WorkListBox";
-            this.WorkListBox.Size = new System.Drawing.Size(167, 30);
+            this.WorkListBox.Size = new System.Drawing.Size(400, 30);
             this.WorkListBox.TabIndex = 19;
             // 
             // TemperaturaPictureBox
