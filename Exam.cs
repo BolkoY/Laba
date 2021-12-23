@@ -16,7 +16,6 @@ namespace тренажер
     {
         private Form formtoopen;
         private List<string> sensors;
-        private List<Chart> diagrams;
         private int locationX=30, locationY=300;
         List<int> x = new List<int>();
         List<int> y = new List<int>();
@@ -46,7 +45,31 @@ namespace тренажер
             ax.Title = "время, с";
             chart.ChartAreas[0].AxisX = ax;
             Axis ay = new Axis();
-            ay.Title = sensorname;
+            if (sensorname=="Проводимость")
+            {
+                ay.Title = sensorname+", (10^-4)/(Om*cm)";
+                ay.Minimum = 1;
+            }
+            else if (sensorname=="Пульс")
+            {
+                ay.Title = sensorname+", уд/мин";
+                ay.Minimum = 30;
+            }
+            else if (sensorname=="Давление")
+            {
+                ay.Title = sensorname+", мм рт. ст.";
+                ay.Minimum = 0;
+            }
+            if (sensorname=="Температура")
+            {
+                ay.Title = sensorname+", °C";
+                ay.Minimum = 34;
+            }
+            else if (sensorname=="Влажность")
+            {
+                ay.Title = sensorname+", %";
+                ay.Minimum = 7;
+            }
             chart.ChartAreas[0].AxisY = ay;
             chart.ChartAreas[0].AxisX.Minimum = 0;
             chart.Series.Add(new Series("Series1"));
@@ -54,7 +77,6 @@ namespace тренажер
             chart.Series["Series1"].ChartType=SeriesChartType.Line;
             for (int i = 0; i <= values.Count; i++)
             {
-                
                 chart.Series["Series1"].Points.AddXY(i, values[i]);
                 await Task.Delay(1000);
             }
@@ -64,88 +86,68 @@ namespace тренажер
         }
         private void ReturnButton_Click(object sender, EventArgs e)
         {
-            formtoopen.Show();
             this.Close();
         }
 
-        public List<double> FillSensorValues(string sensor)
+        public List<double> FillSensorValues(string sensorname)
         {
             Random rnd = new Random();
             int a;
             List<double> values = new List<double>();
-            if (sensor == null) { return null; }
-            if (sensor=="Проводимость")
+            if (sensorname == null) { return null; }
+            if (sensorname=="Проводимость")
             {
-                a=rnd.Next(3000, 20000);
+                a=rnd.Next(2, 4);
                 for (int i = 0; i<=10; i++)
                 {
-                    values.Add(a+rnd.Next(0, 1000));
+                    values.Add(a+(rnd.NextDouble()-rnd.NextDouble())/2);
                 }
                 return values;
             }
-            else if (sensor=="Пульс")
+            else if (sensorname=="Пульс")
             {
-                a=rnd.Next(20, 200);
+                a=rnd.Next(40, 200);
                 for (int i = 0; i<=10; i++)
                 {
-                    values.Add(a+rnd.Next(0, 30));
+                    values.Add(a+rnd.Next(-10, 10));
                 }
                 return values;
             }
-            else if (sensor=="Давление")
+            else if (sensorname=="Давление")
             {
                 a=rnd.Next(60, 200);
                 for (int i = 0; i<=10; i++)
                 {
                     
-                    values.Add(a+rnd.Next(0, 30));
+                    values.Add(a+rnd.Next(-10, 10));
                 }
                 return values;
             }
-            else if (sensor=="Температура")
+            else if (sensorname=="Температура")
             {
                 a=rnd.Next(35, 40);
                 for (int i = 0; i<=10; i++)
                 {
-                    values.Add(a+rnd.NextDouble());
+                    values.Add(a+rnd.NextDouble()-rnd.NextDouble());
                 }
                 return values;
             }
-            else if (sensor=="Влажность")
+            else if (sensorname=="Влажность")
             {
                 a=rnd.Next(8, 20);
                 for (int i = 0; i<=10; i++)
                 {
-                    values.Add(a+rnd.NextDouble());
+                    values.Add(a+rnd.NextDouble()-rnd.NextDouble());
                 }
                 return values;
             }
             else { return null; }
         }
-        private void TypWorkloadLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-                
-        }
+        
 
         private void Exam_FormClosed(object sender, FormClosedEventArgs e)
         {
             formtoopen.Show();
-        }
-
-        private void Exam_Load(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
         }
 
         public string NameLB
@@ -199,9 +201,5 @@ namespace тренажер
             DavleniePictureBox.Visible=true;
         }
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

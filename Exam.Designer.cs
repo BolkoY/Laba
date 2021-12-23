@@ -150,7 +150,6 @@
             this.TypWorkloadLabel.Size = new System.Drawing.Size(196, 31);
             this.TypWorkloadLabel.TabIndex = 17;
             this.TypWorkloadLabel.Text = "тип нагрузки:";
-            this.TypWorkloadLabel.Click += new System.EventHandler(this.TypWorkloadLabel_Click);
             // 
             // SexListBox
             // 
@@ -219,7 +218,6 @@
             this.DavleniePictureBox.TabIndex = 22;
             this.DavleniePictureBox.TabStop = false;
             this.DavleniePictureBox.Visible = false;
-            this.DavleniePictureBox.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // VlajnostPictureBox
             // 
@@ -273,7 +271,6 @@
             this.Text = "Обследование";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Exam_FormClosed);
-            this.Load += new System.EventHandler(this.Exam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TemperaturaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PulsPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProvodimostPictureBox)).EndInit();

@@ -64,7 +64,6 @@
             this.SetLabel.Size = new System.Drawing.Size(382, 24);
             this.SetLabel.TabIndex = 9;
             this.SetLabel.Text = "Выберите устанавливаемые датчики:";
-            this.SetLabel.Click += new System.EventHandler(this.NameLabel_Click);
             // 
             // SetWorkloadLabel
             // 
@@ -165,7 +164,6 @@
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(297, 29);
             this.NameTextBox.TabIndex = 26;
-            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // dateTimePicker
             // 
@@ -215,6 +213,7 @@
             this.Name = "StartExam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация обследавания";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartExam_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

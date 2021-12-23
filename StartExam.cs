@@ -15,8 +15,8 @@ namespace тренажер
     {
         public Form formtoopen;
         string age, sex;
-
-        public StartExam(Main main)
+        bool close=true;
+        public StartExam(Form main)
         {
             InitializeComponent();
             formtoopen = main;
@@ -24,19 +24,11 @@ namespace тренажер
 
         private void ReturnButton_Click(object sender, EventArgs e)
         {
-            formtoopen.Show();
-            this.Hide();
+            close = false;
+            this.Close();
         }
 
-        private void NameLabel_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void List_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
 
         
         private void StartExamButton_Click(object sender, EventArgs e)
@@ -122,9 +114,18 @@ namespace тренажер
                 return false;
             }
         }
-        private void NameTextBox_TextChanged(object sender, EventArgs e)
+
+        private void StartExam_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+            if (close==true) 
+                Application.Exit();
+            else formtoopen.Show();
+        }
+
+        public string nametextbox
+        { 
+            get { return NameTextBox.Text; } 
+            set { NameTextBox.Text =value; } 
         }
 
 

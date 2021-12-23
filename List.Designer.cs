@@ -48,7 +48,6 @@
             this.ListPanel.Name = "ListPanel";
             this.ListPanel.Size = new System.Drawing.Size(664, 325);
             this.ListPanel.TabIndex = 0;
-            this.ListPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ListPanel_Paint);
             // 
             // ListLabel
             // 
@@ -69,7 +68,6 @@
             this.ListBox.Name = "ListBox";
             this.ListBox.Size = new System.Drawing.Size(664, 277);
             this.ListBox.TabIndex = 0;
-            this.ListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox_SelectedIndexChanged);
             // 
             // AddPanel
             // 

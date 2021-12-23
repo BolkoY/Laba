@@ -79,9 +79,5 @@ namespace тренажер
             }
 
         }
-        private void NameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

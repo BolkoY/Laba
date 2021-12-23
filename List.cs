@@ -13,6 +13,7 @@ namespace тренажер
 {
     public partial class List : Form
     {
+        bool close = true;
         public Form formtoopen;
         public List(Main main)
         {
@@ -27,11 +28,6 @@ namespace тренажер
             add.Show();
         }
 
-        private void ListPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void List_Load(object sender, EventArgs e)
         {
             DataBaseUpdate();
@@ -39,19 +35,17 @@ namespace тренажер
 
         private void List_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if (close==true)
+                Application.Exit();
+            else formtoopen.Show();
         }
 
         private void ReturnButton_Click(object sender, EventArgs e)
         {
-            formtoopen.Show();
-            this.Hide();
+            close = false;
+            this.Close();
         }
 
-        private void ListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
@@ -77,10 +71,14 @@ namespace тренажер
             while (reader.Read())
             {
                 string a = "";
-                for (int i = 0; i<3; i++)
+                for (int i = 1; i<3; i++)
                 {
-                    a+=reader.GetString(i);
+                    a+=reader.GetString(i)+" ";
                 }
+                if (reader.GetString(3)=="1")
+                    a+="мужщина";
+                else if (reader.GetString(3)=="0")
+                    a+="женщина";
                 ListBox.Items.Add(a);
             }
             
